@@ -12,10 +12,10 @@ public class C01_BasicNavigations {
         driver.get("https://www.clarusway.com/");
 // Navigate to URL: https://amazon.com/
         driver.get("https://amazon.com/");
-// Come back to the w3schools using the back command.
+// Come back to the clarusway using the back command.
         Thread.sleep(3000);
         driver.navigate().back();
-// Again go back to the stackoverflow website using forward command
+// Again go back to the amazon website using forward command
         Thread.sleep(3000);
         driver.navigate().forward();
 // Refresh the Browser using refresh command.
@@ -26,3 +26,4 @@ public class C01_BasicNavigations {
         driver.close();
     }
 }
+
