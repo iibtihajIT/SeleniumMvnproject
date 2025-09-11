@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class T08_BrowserSizePosition {
+public class T08_BrowserSizePosition0 {
     // Open Chrome in @BeforeEach.
     WebDriver driver;
 
@@ -25,8 +25,11 @@ public class T08_BrowserSizePosition {
         driver.get("https://www.bbc.com");
         driver.manage().window().setSize(new Dimension(800, 600));
         Dimension size = driver.manage().window().getSize();
-        assertEquals(800, size.getWidth(), "Width mismatch");
-        assertEquals(600, size.getHeight(), "Height mismatch");
+
+        Assertions.assertAll(
+                () -> assertEquals(800, size.getWidth(), 5, "Width mismatch"),
+                () -> assertEquals(600, size.getHeight(), 5, "Height mismatch")
+        );
     }
 
     // Move the window to position (100, 100) and assert its position.

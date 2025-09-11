@@ -13,7 +13,7 @@ import java.util.List;
 
 import java.time.Duration;
 
-public class T11_CheckboxInteraction_RadioButtonSelection {
+public class T11_CheckboxInteraction {
 
 //    Go to "https://the-internet.herokuapp.com/checkboxes".
 //    Checks the current state of both checkboxes
@@ -34,13 +34,6 @@ public class T11_CheckboxInteraction_RadioButtonSelection {
                 Assertions.fail();
             }
         }
-
-    }
-
-    @Test
-            void radioButtonSelectionTest() {
-
-
 
     }
 
