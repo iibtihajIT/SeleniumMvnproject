@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FreePractice {
+public class T20_FreePractice {
     private WebDriver driver;
 
     @BeforeEach
