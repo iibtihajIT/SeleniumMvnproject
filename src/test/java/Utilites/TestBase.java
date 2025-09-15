@@ -1,13 +1,19 @@
-package utilities;
-
+package Utilites;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public abstract class TestBase {
 
@@ -26,5 +32,27 @@ public abstract class TestBase {
         driver.quit();
     }
 
+    public void takeFullPageScreenshot() {
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String now = new SimpleDateFormat("yyyyMMddhhmmssSSSSS").format(new Date());
+        try {
+            FileUtils.copyFile(sourceFile, new File(System.getProperty("user.dir") + "\\test_outputs\\screenshots\\pages_screenshot" + now + ".png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void takeElementsScreenshot(WebElement element) {
+        File screenshot = element.getScreenshotAs(OutputType.FILE);
+        String now = new SimpleDateFormat("yyyyMMddhhmmssSSSSS").format(new Date());
+        try {
+            FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + "\\test_outputs\\screenshots\\elements_screenshot" + now + ".png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
+

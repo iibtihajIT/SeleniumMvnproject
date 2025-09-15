@@ -1,6 +1,6 @@
 package tasks;
 
-import utilities.TestBase;
+import Utilites.TestBase;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

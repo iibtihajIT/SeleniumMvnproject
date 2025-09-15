@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import utilities.TestBase;
+import Utilites.TestBase;
 
 
 public class C22_JSAlert extends TestBase {

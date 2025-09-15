@@ -3,7 +3,7 @@ package tests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import utilities.TestBase;
+import Utilites.TestBase;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
