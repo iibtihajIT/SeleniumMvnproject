@@ -52,6 +52,7 @@ public class T24_UserRegistrationANDScreenshot extends TestBase {
         CelebrateLogin.click();
         Thread.sleep(2000);
 
+
         // Capture a screenshot of the page with confetti.
         takeFullPageScreenshot();
         Thread.sleep(2000);
